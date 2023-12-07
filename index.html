@@ -62,7 +62,7 @@
             </div>
             <div class="about-row row">
                 <div class="col-md-6 d-flex align-items-center" >
-                    <img src="assets/images/Me.jpg" alt="" height="540px" style="margin: auto">
+                    <img src="assets/images/anh02.jpg" alt="" width="450px" height="520px" style="margin: auto">
                 </div>
                 <div class="col-md-6">
                    
@@ -70,11 +70,11 @@
                         Vòng lặp đời sâu xa vô tận<br>
                         Sáng tạo lên, cho hiệu ứng tung bay<br><br>
                         
-                        Code ngày đêm nhưng lỗi mãi không thôi,<br>
+                        Code ngày đêm nhưng bug mãi không thôi,<br>
                         Một error nhưng muôn ngàn cảnh báo!<br>
                         Mà lỗi này ta biết Fix từ đâu.<br>
                         Màu hoa đỏ sáng bừng lên từ code,<br>
-                        Ai đâu ngờ đó là lỗi Error.<br><br>
+                        Ai đâu ngờ đó là lỗi full line.<br><br>
                         
                         Những dòng lệnh với muôn ngàn kỉ niệm,<br>
                         Ôi Nhị Phân, C Shap, Python<br>
@@ -162,8 +162,7 @@
                 </div>
             </div>
         </div>
-    </div>
-     -->
+    </div>-->
     <div id="gallery" class="gallery">
         <div class="container">
             <div class="session-title row">
@@ -293,16 +292,35 @@
                   </div>
               </section>
               
-
-        <!-- ######## Copyright End ####### -->   
-        
-    
-    <!-- ######################### Footer Starts Here #################### -->
-     
-     
-     
     </body>
+    <script>
+        // Wrap the text in an array of words
+        var textArray = ["Thất", "bại", "đơn", "giản", "chỉ", "là", "cơ", "hội", "để", "ta", "bắt", "đầu", "lại", "mọi", "thứ", "một", "cách", "thông", "minh", "hơn."];
+    
+        // Get the element where you want to display the text
+        var textElement = document.querySelector('.homexp p');
+    
+        // Function to display each word with a delay
+        function displayWords(index) {
+            setTimeout(function () {
+                // Concatenate the words up to the current index
+                var displayText = textArray.slice(0, index + 1).join(' ');
+    
+                // Set the text of the element
+                textElement.textContent = displayText;
+    
+                // If not reached the end of the array, call the function recursively
+                if (index < textArray.length - 1) {
+                    displayWords(index + 1);
+                }
+            }, 200); // Adjust the delay (in milliseconds) between each word
+        }
+    
+        // Start displaying the words
+        displayWords(0);
+    </script>
 
+    
     <script src="assets/js/jquery-3.2.1.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
